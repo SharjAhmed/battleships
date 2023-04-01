@@ -63,3 +63,16 @@ def fire_shot():
         print("\nPlease enter a valid column")
         column = input("\nEnter ship column A-H: ").upper()
     return (int(row) - 1, letters_to_numbers[column])
+
+
+def count_hit_ships(board):
+    """
+    Count every time the player hits a ship
+    Game is over when all 5 ships are hit
+    """
+    count = 0
+    for row in board:
+        for column in row:
+            if column == "⊗":
+                count += 1
+    return count
