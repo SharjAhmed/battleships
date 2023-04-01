@@ -31,6 +31,15 @@ def print_board(board):
         row_number += 1
 
 
+print("\n⛴  WELCOME TO BATTLESHIPS ⛴\n")
+print("YOU HAVE 25 GUESSES TO SINK 5 BATTLESHIPS\n")
+print("Game Legend:")
+print("▢ - blank space")
+print("⊗ - missed shot")
+print("♨ - hit ship\n")
+print_board(board)
+
+
 def create_ships(board):
     """
     Place ships randomly
@@ -73,22 +82,20 @@ def count_hit_ships(board):
 create_ships(HIDDEN_BOARD)
 turns = 25
 while turns > 0:
-    print("⛴  WELCOME TO BATTLESHIPS ⛴\n")
-    print("YOU HAVE 25 GUESSES TO SINK 5 BATTLESHIPS\n")
-    print("Game Legend:")
-    print("▢ - blank space")
-    print("⊗ - missed shot")
-    print("♨ - hit ship\n")
     print_board(GUESS_BOARD)
     (row, column) = fire_shot()
     if GUESS_BOARD[row][column] == "⊗ ":
-        print("\nYou've already guessed that \n")
+        print("\n------------------------------------")
+        print("You've already guessed that")
+        print("------------------------------------\n")
     elif HIDDEN_BOARD[row][column] == "♨":
         print("\nGREAT SHOT! you sunk a battleship \n")
         GUESS_BOARD[row][column] = "♨"
         turns -= 1
     else:
-        print("\nAh unlucky, you missed! \n")
+        print("\n------------------------------")
+        print("Ah unlucky, you missed!")
+        print("------------------------------\n")
         GUESS_BOARD[row][column] = "⊗"
         turns -= 1
     if count_hit_ships(GUESS_BOARD) == 5:
