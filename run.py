@@ -35,9 +35,6 @@ def print_board(board):
         row_number += 1
 
 
-print_board(GUESS_BOARD)
-print_board(HIDDEN_BOARD)
-
 
 def create_ships(board):
     """
@@ -76,3 +73,33 @@ def count_hit_ships(board):
             if column == "⊗":
                 count += 1
     return count
+
+
+create_ships(HIDDEN_BOARD)
+turns = 25
+while turns > 0:
+    print("⛴  WELCOME TO BATTLESHIPS ⛴\n")
+    print("YOU HAVE 25 GUESSES TO SINK 5 BATTLESHIPS\n")
+    print("Game Legend:")
+    print("▢ - blank space")
+    print("⨀ - missed shot")
+    print("⊗ - hit ship\n")
+    print_board(GUESS_BOARD)
+    (row, column) = fire_shot()
+    if GUESS_BOARD[row][column] == "⨀ ":
+        print("\nYou've already guessed that \n")
+    elif HIDDEN_BOARD[row][column] == "⊗":
+        print("\nGREAT SHOT! you sunk a battleship \n")
+        GUESS_BOARD[row][column] = "⊗"
+        turns -= 1
+    else:
+        print("\nAh unlucky, you missed! \n")
+        GUESS_BOARD[row][column] = "⨀"
+        turns -= 1
+    if count_hit_ships(GUESS_BOARD) == 5:
+        print("\n CONGRATULATIONS! You've sunk all 5 battleships! \n")
+        break
+    print("You have " + str(turns) + " turns remaining \n")
+    if turns == 0:
+        print("\n GAME OVER! you have 0 turns remaining \n")
+        break
