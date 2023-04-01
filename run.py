@@ -37,3 +37,14 @@ def print_board(board):
 
 print_board(GUESS_BOARD)
 print_board(HIDDEN_BOARD)
+
+
+def create_ships(board):
+    """
+    Place ships randomly within board
+    """
+    for ship in range(5):
+        (ship_row, ship_column) = (randint(0, 7), randint(0, 7))
+        while board[ship_row][ship_column] == "⊗":
+            (ship_row, ship_column) = (randint(0, 7), randint(0, 7))
+        board[ship_row][ship_column] = "⊗"
