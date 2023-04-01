@@ -5,7 +5,7 @@ from random import randint
 
 # Game Legend
 # ▢ - blank space
-# ⨀ - missed shot
+# ⊗ - missed shot
 # ⊗ - hit ship
 
 HIDDEN_BOARD = [["▢"] * 8 for x in range(8)]
@@ -35,16 +35,19 @@ def print_board(board):
         row_number += 1
 
 
+print_board(GUESS_BOARD)
+print_board(HIDDEN_BOARD)
+
 
 def create_ships(board):
     """
-    Place ships randomly within board
+    Place ships randomly
     """
     for ship in range(5):
         (ship_row, ship_column) = (randint(0, 7), randint(0, 7))
-        while board[ship_row][ship_column] == "⊗":
+        while board[ship_row][ship_column] == "♨":
             (ship_row, ship_column) = (randint(0, 7), randint(0, 7))
-        board[ship_row][ship_column] = "⊗"
+        board[ship_row][ship_column] = "♨"
 
 
 def fire_shot():
@@ -70,7 +73,7 @@ def count_hit_ships(board):
     count = 0
     for row in board:
         for column in row:
-            if column == "⊗":
+            if column == "♨":
                 count += 1
     return count
 
@@ -82,19 +85,19 @@ while turns > 0:
     print("YOU HAVE 25 GUESSES TO SINK 5 BATTLESHIPS\n")
     print("Game Legend:")
     print("▢ - blank space")
-    print("⨀ - missed shot")
-    print("⊗ - hit ship\n")
+    print("⊗ - missed shot")
+    print("♨ - hit ship\n")
     print_board(GUESS_BOARD)
     (row, column) = fire_shot()
-    if GUESS_BOARD[row][column] == "⨀ ":
+    if GUESS_BOARD[row][column] == "⊗ ":
         print("\nYou've already guessed that \n")
-    elif HIDDEN_BOARD[row][column] == "⊗":
+    elif HIDDEN_BOARD[row][column] == "♨":
         print("\nGREAT SHOT! you sunk a battleship \n")
-        GUESS_BOARD[row][column] = "⊗"
+        GUESS_BOARD[row][column] = "♨"
         turns -= 1
     else:
         print("\nAh unlucky, you missed! \n")
-        GUESS_BOARD[row][column] = "⨀"
+        GUESS_BOARD[row][column] = "⊗"
         turns -= 1
     if count_hit_ships(GUESS_BOARD) == 5:
         print("\n CONGRATULATIONS! You've sunk all 5 battleships! \n")
