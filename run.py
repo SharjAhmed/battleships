@@ -48,3 +48,18 @@ def create_ships(board):
         while board[ship_row][ship_column] == "⊗":
             (ship_row, ship_column) = (randint(0, 7), randint(0, 7))
         board[ship_row][ship_column] = "⊗"
+
+
+def fire_shot():
+    """
+    Asking player what row and column to fire their shot
+    """
+    row = input("\nEnter ship row 1-8: ")
+    while row not in "12345678":
+        print("\nPlease enter a valid row")
+        row = input("\nEnter ship row 1-8: \n")
+    column = input("\nEnter ship column A-H: ").upper()
+    while column not in "ABCDEFGH":
+        print("\nPlease enter a valid column")
+        column = input("\nEnter ship column A-H: ").upper()
+    return (int(row) - 1, letters_to_numbers[column])
