@@ -69,6 +69,7 @@ Can you beat the computer and sink all the ships before your turns run out? Choo
 
 * Game Criteria
     * I wanted to state the criteria on how to beat the game early on, before the player starts playing, so that they have an understanding of what needs to be done to win.
+    * I also included a Game Legend so the player understands what each emoticon on the board means.
 
 ![Game Criteria](assets/images/game-criteria.png)
 
