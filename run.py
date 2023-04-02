@@ -84,24 +84,28 @@ turns = 25
 while turns > 0:
     print_board(GUESS_BOARD)
     (row, column) = fire_shot()
-    if GUESS_BOARD[row][column] == "⊗ ":
-        print("\n------------------------------------")
-        print("You've already guessed that")
-        print("------------------------------------\n")
+    if GUESS_BOARD[row][column] == "⊗":
+        print("\n------------------------------------------------")
+        print("You've already guessed that! Please guess again")
+        print("--------------------------------------------------\n")
     elif HIDDEN_BOARD[row][column] == "♨":
         print("\nGREAT SHOT! you sunk a battleship \n")
         GUESS_BOARD[row][column] = "♨"
         turns -= 1
     else:
-        print("\n------------------------------")
+        print("\n------------------------")
         print("Ah unlucky, you missed!")
-        print("------------------------------\n")
+        print("--------------------------\n")
         GUESS_BOARD[row][column] = "⊗"
         turns -= 1
     if count_hit_ships(GUESS_BOARD) == 5:
+        print("\n------------------------------------------------------")
         print("\n CONGRATULATIONS! You've sunk all 5 battleships! \n")
+        print("--------------------------------------------------------\n")
         break
     print("You have " + str(turns) + " turns remaining \n")
     if turns == 0:
+        print("\n--------------------------------------------")
         print("\n GAME OVER! you have 0 turns remaining \n")
+        print("----------------------------------------------\n")
         break
