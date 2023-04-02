@@ -4,7 +4,7 @@
 
 [Live Webpage]()
 
-![Alt text](assets/images/game-screenshot.png)
+![Game Screenshot](assets/images/game-screenshot.png)
 
 Battleships is a classic game.
 
@@ -65,24 +65,53 @@ Can you beat the computer and sink all the ships before your turns run out? Choo
 * Title Area
     * I wanted to keep the title area clean and simple, but not boring. So I added the ship emoticons on either side.
 
-![Alt Text](assets/images/title-area.png)
+![Title Area](assets/images/title-area.png)
 
 * Game Criteria
     * I wanted to state the criteria on how to beat the game early on, before the player starts playing, so that they have an understanding of what needs to be done to win.
 
-![Alt Text](assets/images/game-criteria.png)
+![Game Criteria](assets/images/game-criteria.png)
 
 * Game Board
-    * I wanted the board to be visible after every round and to be easy to understand.
-    * I decided to lable each axis with numbers (1-8) for the rows and letters (A-H) for the columns.
+   * I wanted the board to be visible after every round and to be easy to understand.
+   * I decided to lable each axis with numbers (1-8) for the rows and letters (A-H) for the columns.
 
-![Alt Text](assets/images/game-board.png)
+![Game Board](assets/images/game-board.png)
 
 * Gameplay
     * The player is asked to enter a row and column to play their shot
-    * If an invalid character is entered, then they are met with a message to input a valid row/column
 
-![Alt Text](assets/images/error.png)
+![Gameplay](assets/images/gameplay.png)
+
+* Invalid Row/Column
+    * If an invalid character is entered, then they are met with the message "Please enter a valid column"
+
+![Error Message](assets/images/error.png)
+
+* Duplicate Guess
+    * If a player guesses a spot they have already chosen, they are met with the message "You've already guessed that! Please guess again"
+
+![Guess Again](assets/images/guess-again.png)
+
+* Missed Shot
+    * If the player misses a ship with their shot, they are met with the message "Ah unlucky, you missed!"
+
+![Missed Shot](assets/images/missed-shot.png) 
+
+* Hit Ship
+    * If the player hits a ship with their guess, they are met with the message "GREAT SHOT! you sunk a battleship!"
+
+![Hit Ship](assets/images/hit-ship.png)
+
+* Game Won
+    * If the player hits all 5 ships, they win the game and are met with the message "CONGRATULATIONS! You've sunk all 5 battleships!"
+
+![Game Won](assets/images/win-game.png)
+
+* Game Over
+    * If the player uses up all 25 guesses and hasn't sunk all 5 ships, then they lose and are met with the message "GAME OVER! you have 0 turns remaining"
+
+![Game Over](assets/images/game-over.png)
 
 
 ## Technologies
