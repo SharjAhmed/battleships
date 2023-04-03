@@ -80,7 +80,6 @@ def count_hit_ships(board):
 
 
 create_ships(HIDDEN_BOARD)
-print_board(HIDDEN_BOARD)
 turns = 25
 while turns > 0:
     print_board(GUESS_BOARD)
