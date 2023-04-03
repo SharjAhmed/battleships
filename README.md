@@ -27,6 +27,7 @@ Can you beat the computer and sink all the ships before your turns run out? Choo
 * [Technologies](#technologies)
 * [Testing](#testing)
 * [Validator Testing](#validator-testing)
+* [Bugs](#bugs)
 * [Deployment](#deployment)
 * [Credits](#credits)
 
@@ -152,21 +153,17 @@ The project is created with:
 ![PEP8](assets/images/pep8.png)
 
 
-### Testing User Stories from User Experience Section
-1. First-Time Player Goals:
-    * 
-
-2. Returning Player Goals:
-    * 
-
-3. Site Owner:
-    * 
 ### Bugs
 | Bug | How I solved the issue |
 | :--- | :--- |
 | When testing game I realised that when the player guesses a space they have already guessed, the function did not work. | After investigating further, I realised that there was a space in the function that should not have been there after "⊗ " - corrected to "⊗" - this solved the issue. |
 
+### Unsolved Bugs
+| Bug | 
+| :--- |
+| On the initial game board, the column headings appear twice, this does not happen once player has made a guess |
 
+![Game Board Bug](assets/images/bug.png)
 
 ## Deployment
 
