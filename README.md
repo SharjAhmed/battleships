@@ -21,6 +21,8 @@ Can you beat the computer and sink all the ships before your turns run out? Choo
 ## Table of contents
 * [Project Goals](#project-goals)
 * [User Experience](#user-experience)
+* [User Stories](#user-stories)
+* [Flowchart](#flowchart)
 * [Features](#features)
 * [Technologies](#technologies)
 * [Testing](#testing)
@@ -59,6 +61,13 @@ Can you beat the computer and sink all the ships before your turns run out? Choo
 * Site Owner
     1. As the site owner, I want to be able to make it clear how to play, and how to check the rules.
     2. As the site owner, I want to make it clear what the progress is and who has won the game. 
+
+## Flowchart
+* I designed the basic function of this game in a flowchart in [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker). 
+* This helped me to plan the logic and structure of the game. 
+* The flowchart runs through initial stage of setting up the game, and loops through each guess stage until a win is detected.
+
+![Flowchart](assets/images/flowchart.png)
         
    
 ## Features
@@ -126,7 +135,7 @@ The project is created with:
     * [GitHub](https://github.com/):
         * GitHub was used to store the project's code after being pushed from Git.
     * [Heroku](https://www.heroku.com)
-        * Heroku was used to delpoy the project to a Python terminal.
+        * Heroku is a cloud based platform used to deploy the application on.
 
 ## Testing
 * Browser Testing:
@@ -140,7 +149,7 @@ The project is created with:
     * PEP8
         * State if any errors were found
 
-![Alt text]()
+![PEP8](assets/images/pep8.png)
 
 
 ### Testing User Stories from User Experience Section
@@ -153,11 +162,10 @@ The project is created with:
 3. Site Owner:
     * 
 ### Bugs
-* Solved bugs
-    * When testing game I realised that when the player guesses a space they have already guessed, the function did not work.
-    * After investigating further, I realised that there was a space in the function that should not have been there after "⊗ " - corrected to "⊗" - this solved the issue
-* Unfixed bugs
-    * 
+| Bug | How I solved the issue |
+| :--- | :--- |
+| When testing game I realised that when the player guesses a space they have already guessed, the function did not work. | After investigating further, I realised that there was a space in the function that should not have been there after "⊗ " - corrected to "⊗" - this solved the issue. |
+
 
 
 ## Deployment
@@ -172,5 +180,9 @@ The project is created with:
      * Click on **Deploy**
     
 ## Credits 
-
-* 
+* My fellow students for helping me understand the python code for the gameplay.
+* https://www.youtube.com/watch?v=XTr5OF9MRCg&list=PLw22WCqAVCN6EXylkzhtMwvgcLq4TrcQX and https://www.youtube.com/watch?v=7Ki_2gr0rsE for helping me understand python behind gameplay.
+* [Code Playground](https://trinket.io/python/f7ad7f9864) - Used to write code freely and do quick testing.
+* [Geeks for Geeks](https://www.geeksforgeeks.org/python-string-join-method/) - for helping me better understand Python String join()
+* [Learn Python](https://learnpython.com/) - for helping me understand some basic Python functions.
+* And as always, my mentor Jubril for helping me through my projects!
