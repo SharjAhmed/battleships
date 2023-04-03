@@ -1,8 +1,10 @@
-# Battleships 
+![Title](assets/images/title.png)
 
 (Developer: Sharj Ahmed)
 
 [Live Webpage](https://battleships-01.herokuapp.com/)
+
+![Responsive](assets/images/responsive.png)
 
 ![Game Screenshot](assets/images/game-screenshot.png)
 
@@ -31,6 +33,7 @@ Can you beat the computer and sink all the ships before your turns run out? Choo
 * [Deployment](#deployment)
 * [Credits](#credits)
 
+
 ## Project Goals
 * User Goals
     * play a fun game of Battleships.
@@ -42,6 +45,7 @@ Can you beat the computer and sink all the ships before your turns run out? Choo
     * End the game either when all 5 ships are hit or when all 25 turns have been used up.
     * Make the gameplay experience fun and challenging to encourage revisits to the game. 
 
+
 ## User Experience
 * Target Audience
     * This game is designed for anyone looking for a fun time passer.
@@ -50,6 +54,7 @@ Can you beat the computer and sink all the ships before your turns run out? Choo
     * A simple gameplay experience
     * The ability to choose the coordinates for their shot.
     * Game board that is easily visible when playing.
+
 
 ## User Stories
 * First-time Player
@@ -63,14 +68,15 @@ Can you beat the computer and sink all the ships before your turns run out? Choo
     1. As the site owner, I want to be able to make it clear how to play, and how to check the rules.
     2. As the site owner, I want to make it clear what the progress is and who has won the game. 
 
+
 ## Flowchart
 * I designed the basic function of this game in a flowchart in [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker). 
 * This helped me to plan the logic and structure of the game. 
 * The flowchart runs through initial stage of setting up the game, and loops through each guess stage until a win is detected.
 
 ![Flowchart](assets/images/flowchart.png)
-        
-   
+
+
 ## Features
 * Title Area
     * I wanted to keep the title area clean and simple, but not boring. So I added the ship emoticons on either side.
@@ -145,10 +151,11 @@ The project is created with:
         * Mozilla Firefox
         * Microsoft Edge
 
+
 ## Validator Testing
 * Validator testing was done to ensure there are no syntax errors with the code:
     * PEP8
-        * State if any errors were found
+        * Code ran through [CI Pythin Linter](https://pep8ci.herokuapp.com/) and no error were found.
 
 ![PEP8](assets/images/pep8.png)
 
@@ -165,6 +172,7 @@ The project is created with:
 
 ![Game Board Bug](assets/images/bug.png)
 
+
 ## Deployment
 
 * This project was deployed using Code Institute's mock terminal for Heroku.
@@ -176,6 +184,7 @@ The project is created with:
      * Link the Heroku app to the repository
      * Click on **Deploy**
     
+
 ## Credits 
 * My fellow students for helping me understand the python code for the gameplay.
 * https://www.youtube.com/watch?v=XTr5OF9MRCg&list=PLw22WCqAVCN6EXylkzhtMwvgcLq4TrcQX and https://www.youtube.com/watch?v=7Ki_2gr0rsE for helping me understand python behind gameplay.
