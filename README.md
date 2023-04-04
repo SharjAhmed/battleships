@@ -173,17 +173,17 @@ The project is created with:
 ### Testing User Stories
 | Goals | How are they achieved? | Image |
 | :--- | :--- | :--- |
-|`First Time Player` |
 | | | |
+|`First Time Player` |
 | Easily play a game of Battleships | Game automatically moves onto mext step once the player has made a choice | |
 | Understand how to play |  Rules are explained before player makes a choice | ![Game Screenshot](assets/images/game-screenshot.png)
 | Be able to check the game board as the game is being played | After every turn the game board is visible showing what cooridnates have already been chosen | |
-|`Returning Player` |
 | | | |
+|`Returning Player` |
 | Play the game with as much enjoyment as the initial visit | Game is randomised so no two games will ever be the same | |
 | Ability to recheck the rules | As before, the rules are stated before the game begins | | 
-|`Site Owner` |
 | | | |
+|`Site Owner` |
 | Make it clear how to play, and how to check the rules | Rules are clearly stated before the game is played | | 
 | Make it clear what the progress is and who has won the game | Updated board is shown after every round, and a message is shown depending on whether the player has hit/missed a ship or guessed a space they have already guessed previously. Upon game ending, they will be informed whether they have won after hitting all ships or lost after running out of moves | |
 
