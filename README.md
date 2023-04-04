@@ -166,9 +166,9 @@ The project is created with:
 | When testing the game I realised that when the player guesses a space they have already guessed, the function did not work. | After investigating further, I realised that there was a space in the function that should not have been there after "⊗ " - corrected to "⊗" - this solved the issue. |
 
 ### Unsolved Bugs
-| Bug | 
-| :--- |
-| On the initial game board, the column headings appear twice, this does not happen once the player has made a guess |
+| Bug | Image |
+| :--- | :--- |
+| On the initial game board, the column headings appear twice, this does not happen once the player has made a guess | ![Game Board Bug](assets/images/bug.png) |
 
 ### Testing User Stories
 | Goals | How are they achieved? | Image |
@@ -186,9 +186,6 @@ The project is created with:
 | | | |
 | Make it clear how to play, and how to check the rules | Rules are clearly stated before the game is played | | 
 | Make it clear what the progress is and who has won the game | Updated board is shown after every round, and a message is shown depending on whether the player has hit/missed a ship or guessed a space they have already guessed previously. Upon game ending, they will be informed whether they have won after hitting all ships or lost after running out of moves | |
-
-![Game Board Bug](assets/images/bug.png)
-
 
 ## Deployment
 
