@@ -55,15 +55,21 @@ def fire_shot():
     """
     Asking player what row and column to fire their shot
     """
-    row = input("\nEnter ship row 1-8: ")
+
+    row = input("\nEnter ship row 1-8: ").upper()
+    while len(row) == 0:
+        row = input("\nEnter ship row 1-8: ").upper()
     while row not in "12345678":
-        print("\nPlease enter a valid row")
-        row = input("\nEnter ship row 1-8: \n")
+        print('Please select a valid row 1 to 8')
+        row = input("Ship Row: ").upper()
+
     column = input("\nEnter ship column A-H: ").upper()
-    while column not in "ABCDEFGH":
-        print("\nPlease enter a valid column")
+    while len(column) == 0:
         column = input("\nEnter ship column A-H: ").upper()
-    return (int(row) - 1, letters_to_numbers[column])
+    while column not in "ABCDEFGH":
+        print('Please select a valid column A to H')
+        column = input("\nEnter ship column A-H: ").upper()
+    return int(row) - 1, letters_to_numbers[column]
 
 
 def count_hit_ships(board):
